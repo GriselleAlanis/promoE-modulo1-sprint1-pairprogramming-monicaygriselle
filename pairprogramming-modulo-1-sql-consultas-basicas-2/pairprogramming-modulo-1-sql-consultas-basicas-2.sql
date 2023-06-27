@@ -66,7 +66,7 @@ cuál sería la fecha de envío (ShippedDate) de los pedidos almacenados en la b
 renombrada como FechaRetrasada.
 💡 Pista 💡 Para realizar lo anterior, busca documentación de la función DATE_ADD para MySQL.*/
 
-SELECT *,(DATE_ADD(`shipped_date`, INTERVAL 5 DAY)) AS `FechaRetrasada`
+SELECT DATE_ADD(`shipped_date`, INTERVAL 5 DAY) AS `FechaRetrasada`
 FROM `orders`;
 
 /*Selecciona los productos más rentables:
